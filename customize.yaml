@@ -1,0 +1,4 @@
+sensor.kallaretemp_2_1:
+  friendly_name: Källare temp
+sensor.kallaretemp_2_0:
+  friendly_name: Källare fukt

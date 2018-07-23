@@ -1,0 +1,79 @@
+
+  default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.kitchen
+      - group.awesome_people
+      - group.climate
+    # - group.Basement
+      - group.klimat
+      - sun.sun
+      - sensor.yr_temperature
+      - sensor.yr_symbol
+############################ Utomhus
+  outside:
+    name: Klimat Utomhus
+    #view: yes
+    entities:
+      - sensor.kallaretemp_2_1
+      - sensor.kallaretemp_2_0
+  Utomhus:
+    view: yes
+    entities:
+      - group.outside
+      - sun.sun
+      - sensor.yr_temperature
+      - sensor.yr_symbol
+############################ Källare
+  basement:
+    name: Klimat Källare
+    #view: yes
+    entities:
+      - sensor.kallaretemp_2_1
+      - sensor.kallaretemp_2_0
+  Källare:
+    view: yes
+    entities:
+      - group.basement
+      - sun.sun
+      - sensor.yr_temperature
+      - sensor.yr_symbol
+############################ Entreplan
+  firstfloor:
+    name: Klimat Entreplan
+    #view: yes
+    entities:
+      - sensor.kallaretemp_2_1
+      - sensor.kallaretemp_2_0
+  Entreplan:
+    view: yes
+    entities:
+      - group.firstfloor
+      - sun.sun
+      - sensor.yr_temperature
+      - sensor.yr_symbol
+############################ Vind
+  Attic:
+    name: Klimat Vind
+    #view: yes
+    entities:
+      - sensor.kallaretemp_2_1
+      - sensor.kallaretemp_2_0
+  Vind:
+    view: yes
+    entities:
+      - group.Attic
+      - sun.sun
+      - sensor.yr_temperature
+      - sensor.yr_symbol
+
+############################ Klimat
+  Klimat:
+    name: Klimat Villa-Moga
+    #view: yes
+    entities:
+      - sensor.kallaretemp_2_1
+      - sensor.kallaretemp_2_0
+
+

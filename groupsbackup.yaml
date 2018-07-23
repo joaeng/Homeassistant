@@ -1,0 +1,50 @@
+
+  default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.kitchen
+      - group.awesome_people
+      - group.climate
+  kitchen:
+    name: Kitchen
+    entities:
+      - switch.kitchen_pin_3
+  Utomhus:
+    name: Utomhus
+    view: yes
+    entities:
+      - sensor.bedroom_temp
+      - sensor.porch_temp
+  awesome_people:
+    name: Awesome People
+    view: no
+    entities:
+      - device_tracker.dad_smith
+      - device_tracker.mom_smith
+  källare:
+    name: Källare
+    view: yes
+    entities:
+      - sensor.kallaretemp_2_1
+      - sensor.kallaretemp_2_0
+      - group.källare
+  Entreplan:
+    name: Entreplan
+    view: yes
+    entities:
+      - sensor.bedroom_temp
+      - sensor.porch_temp
+  Vind:
+    name: Vind
+    view: yes
+    entities:
+      - sensor.bedroom_temp
+      - sensor.porch_temp
+  Gästhus:
+    name: Gästhus
+    view: yes
+    entities:
+      - sensor.bedroom_temp
+      - sensor.porch_temp
+
