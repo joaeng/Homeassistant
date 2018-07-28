@@ -89,7 +89,6 @@ binary_sensor:
 
 telegram_bot:
   - platform: polling
-   # api_key: 561936360:AAESnUiqFG-V7OvTO1uzG2GdeRaXeOsSIj4
     api_key: !secret telegram_api
     allowed_chat_ids:
       - 567878632 #jocke
