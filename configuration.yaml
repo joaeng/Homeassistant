@@ -9,7 +9,7 @@ homeassistant:
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: UTC
+  time_zone: Europe/Stockholm
   # Customization file
   customize: !include customize.yaml
 
@@ -58,7 +58,6 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
-
 # Text to speech
 tts:
   - platform: google
@@ -80,3 +79,26 @@ mysensors:
     - device: '/dev/ttyUSB0'    
       persistence_file: '/config/mysensors.json'
 hassio:
+
+
+binary_sensor:
+  - platform: ping
+    host: http://www.engberg.info
+    count: 2
+    scan_interval: 30
+
+telegram_bot:
+  - platform: polling
+   # api_key: 561936360:AAESnUiqFG-V7OvTO1uzG2GdeRaXeOsSIj4
+    api_key: 676643189:AAGp7Haz1dGAmnox_ZyEfWRScctqNfpZYGU
+    allowed_chat_ids:
+      - 567878632 #jocke
+      - 616013004 #helena
+notify:
+  - name: Telegram_Jocke
+    platform: telegram
+    chat_id: 567878632
+  - name: Telegram_Helena
+    platform: telegram
+    chat_id: 616013004
+

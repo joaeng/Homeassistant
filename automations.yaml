@@ -1,1 +1,29 @@
-[]
+- id: '1532802208787'
+  alias: Fukt notis
+  trigger:
+  - at: 07:00
+    platform: time
+  - at: '10:00'
+    platform: time
+  - at: '13:00'
+    platform: time
+  - at: '16:00'
+    platform: time
+  - at: '20:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      message: fukt i källaren {{ states.sensor.kallaretemp_2_0.state }} %
+    service: notify.telegram_jocke
+- alias: telegram bot that replies the temprature
+  trigger:
+  - platform: event
+    event_type: telegram_command
+    event_data:
+      command: /fukt
+  action:
+  - service: telegram_bot.send_message
+    data_template:
+      target: '{{ trigger.event.data.user_id }}'
+      message: Nuvarande Fukt i källaren, {{ states.sensor.kallaretemp_2_0.state }}%

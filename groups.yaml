@@ -11,7 +11,7 @@
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
-############################ Utomhus
+############################# Utomhus
   outside:
     name: Klimat Utomhus
     #view: yes
