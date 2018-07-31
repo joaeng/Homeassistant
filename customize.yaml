@@ -2,3 +2,5 @@ sensor.kallaretemp_2_1:
   friendly_name: Källare temp
 sensor.kallaretemp_2_0:
   friendly_name: Källare fukt
+sensor.yr_temperature:
+  friendly_name: YR TEMP

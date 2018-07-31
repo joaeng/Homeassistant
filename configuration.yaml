@@ -58,6 +58,10 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
+    monitored_conditions:
+      - temperature
+      - symbol
+      - humidity   
 # Text to speech
 tts:
   - platform: google

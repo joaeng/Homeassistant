@@ -11,7 +11,7 @@
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
-      - scripts.yaml
+      - sensor.yr_humidity
 ############################# Utomhus
   outside:
     name: Klimat Utomhus
@@ -26,6 +26,7 @@
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
+      - sensor.yr_humidity
 ############################ Källare
   basement:
     name: Klimat Källare
@@ -40,6 +41,7 @@
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
+      - sensor.yr_humidity
 ############################ Entreplan
   firstfloor:
     name: Klimat Entreplan
@@ -54,6 +56,7 @@
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
+      - sensor.yr_humidity
 ############################ Vind
   Attic:
     name: Klimat Vind
@@ -68,6 +71,7 @@
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
+      - sensor.yr_humidity
 
 ############################ Klimat
   Klimat:
@@ -78,3 +82,20 @@
       - sensor.kallaretemp_2_0
 
 
+  environment:
+    name: Environment
+    view: yes
+    entities:
+      - sensor.date
+      - sensor.time
+      - sensor.yr_symbol
+      - sensor.yr_temperature
+      - sensor.yr_windSpeed
+      - sensor.yr_windDirection
+      - sensor.yr_humidity
+      - sensor.yr_fog
+      - sensor.yr_cloudiness
+      - sensor.dark_sky_precip_intensity
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_temperature
+      - sun.sun
