@@ -27,3 +27,15 @@
     data_template:
       target: '{{ trigger.event.data.user_id }}'
       message: Nuvarande Fukt i källaren, {{ states.sensor.kallaretemp_2_0.state }}%
+  id: b0bcc474eecf4b468d2238aac24afe14
+- id: '1532810540535'
+  alias: 'Hög Fukt '
+  trigger:
+  - entity_id: sensor.kallaretemp_2_0
+    platform: state
+    to: '70'
+  condition: []
+  action:
+  - data:
+      message: Hög fukt i källaren
+    service: notify.telegram_jocke

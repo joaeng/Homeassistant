@@ -11,6 +11,7 @@
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
+      - scripts.yaml
 ############################# Utomhus
   outside:
     name: Klimat Utomhus

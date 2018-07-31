@@ -76,7 +76,7 @@ panel_iframe:
     url: https://cdn.rawgit.com/james-fry/home-assistant-mdi/efd95d7a/home-assistant-mdi.html
 mysensors:
   gateways:
-    - device: '/dev/ttyUSB0'    
+    - device: '/dev/ttyAMA0'    
       persistence_file: '/config/mysensors.json'
 hassio:
 
@@ -86,6 +86,8 @@ binary_sensor:
     host: http://www.engberg.info
     count: 2
     scan_interval: 30
+  - platform: uptimerobot
+    api_key: u612908-62df55ccbf0afe6aed7f155d
 
 telegram_bot:
   - platform: polling
