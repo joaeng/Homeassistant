@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Villa-Moga
   # Location required to calculate the time the sun rises and sets
-  latitude: 59.8753468
-  longitude: 18.04671589999998
+  latitude: 59.910568
+  longitude: 18.051643
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
   # metric for Metric, imperial for Imperial
@@ -80,7 +80,7 @@ panel_iframe:
     url: https://cdn.rawgit.com/james-fry/home-assistant-mdi/efd95d7a/home-assistant-mdi.html
 mysensors:
   gateways:
-    - device: '/dev/ttyAMA0'    
+    - device: '/dev/ttyUSB0'    
       persistence_file: '/config/mysensors.json'
 hassio:
 
