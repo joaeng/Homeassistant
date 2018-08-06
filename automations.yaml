@@ -11,6 +11,10 @@
     platform: time
   - at: '20:00'
     platform: time
+  - at: '17:00'
+    platform: time
+  - at: '21:00'
+    platform: time
   condition: []
   action:
   - data:
@@ -38,4 +42,16 @@
   action:
   - data:
       message: Hög fukt i källaren
+    service: notify.telegram_jocke
+- id: '1533575039523'
+  alias: God natt
+  trigger:
+  - event: sunset
+    platform: sun
+  condition: []
+  action:
+  - data:
+      message: Då säger vi God Natt nu. Den stora lampan har gått ner. Tempen ligger
+        på {{states.sensor.kallaretemp_2_1.state }} & Fukten på {{ states.sensor.kallaretemp_2_0.state
+        }} %
     service: notify.telegram_jocke
