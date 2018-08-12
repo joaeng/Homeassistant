@@ -47,8 +47,8 @@
     name: Klimat Entreplan
     #view: yes
     entities:
-      - sensor.kallaretemp_2_1
-      - sensor.kallaretemp_2_0
+      - sensor.vardagsrumtemp_8_1
+      - sensor.vardagsrumtemp_8_0
   Entreplan:
     view: yes
     entities:
@@ -80,6 +80,8 @@
     entities:
       - sensor.kallaretemp_2_1
       - sensor.kallaretemp_2_0
+      - sensor.vardagsrumtemp_8_1
+     # - sensor.vardagsrumtemp_8_0
 
 
   environment:
