@@ -61,7 +61,15 @@ sensor:
     monitored_conditions:
       - temperature
       - symbol
-      - humidity   
+      - humidity
+  - platform: nut
+    username: nut
+    password: nut
+    resources:
+      - ups.load
+      - ups.status
+      - input.voltage
+      - battery.runtime   
 # Text to speech
 tts:
   - platform: google

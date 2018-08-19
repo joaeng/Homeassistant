@@ -55,3 +55,27 @@
         på {{states.sensor.kallaretemp_2_1.state }} & Fukten på {{ states.sensor.kallaretemp_2_0.state
         }} %
     service: notify.telegram_jocke
+- id: '1534701090394'
+  alias: Strömavbrott
+  trigger:
+  - entity_id: sensor.nut_ups_status_data
+    from: Online
+    platform: state
+    to: Offline
+  condition: []
+  action:
+  - data:
+      message: Strömavbrott
+    service: notify.telegram_jocke
+- id: '1534701155450'
+  alias: Strömmen Tillbaka
+  trigger:
+  - entity_id: sensor.nut_ups_status_data
+    from: Offline
+    platform: state
+    to: Online
+  condition: []
+  action:
+  - data:
+      message: 'Strömmen är tillbaka '
+    service: notify.telegram_jocke

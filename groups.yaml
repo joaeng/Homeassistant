@@ -12,6 +12,8 @@
       - sensor.yr_temperature
       - sensor.yr_symbol
       - sensor.yr_humidity
+      - sensor.nut_ups_load
+             
 ############################# Utomhus
   outside:
     name: Klimat Utomhus
@@ -34,6 +36,8 @@
     entities:
       - sensor.kallaretemp_2_1
       - sensor.kallaretemp_2_0
+     # - sensor.ups.status
+ 
   Källare:
     view: yes
     entities:
@@ -83,21 +87,22 @@
       - sensor.vardagsrumtemp_8_1
      # - sensor.vardagsrumtemp_8_0
 
+############################ Teknik
 
-  environment:
-    name: Environment
+  tech:
+    name: UPS
+    #view: yes
+    entities:
+      - sensor.nut_ups_input_voltage
+      - sensor.nut_ups_battery_runtime
+      - sensor.nut_ups_load
+      - sensor.nut_ups_status_data
+  Teknik:
     view: yes
     entities:
-      - sensor.date
-      - sensor.time
-      - sensor.yr_symbol
-      - sensor.yr_temperature
-      - sensor.yr_windSpeed
-      - sensor.yr_windDirection
-      - sensor.yr_humidity
-      - sensor.yr_fog
-      - sensor.yr_cloudiness
-      - sensor.dark_sky_precip_intensity
-      - sensor.dark_sky_precip_probability
-      - sensor.dark_sky_temperature
+      - group.tech
       - sun.sun
+      - sensor.yr_temperature
+      - sensor.yr_symbol
+      - sensor.yr_humidity
+
