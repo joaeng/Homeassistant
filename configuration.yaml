@@ -69,7 +69,8 @@ sensor:
       - ups.load
       - ups.status
       - input.voltage
-      - battery.runtime   
+      - battery.runtime
+      - ups.mfr   
 # Text to speech
 tts:
   - platform: google

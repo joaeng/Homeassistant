@@ -20,18 +20,18 @@
   - data:
       message: fukt i källaren {{ states.sensor.kallaretemp_2_0.state }} %
     service: notify.telegram_jocke
-- alias: telegram bot that replies the temprature
+- id: b0bcc474eecf4b468d2238aac24afe14
+  alias: Telegram-Bot Fukt
   trigger:
-  - platform: event
-    event_type: telegram_command
-    event_data:
+  - event_data:
       command: /fukt
+    event_type: telegram_command
+    platform: event
   action:
-  - service: telegram_bot.send_message
-    data_template:
-      target: '{{ trigger.event.data.user_id }}'
+  - data_template:
       message: Nuvarande Fukt i källaren, {{ states.sensor.kallaretemp_2_0.state }}%
-  id: b0bcc474eecf4b468d2238aac24afe14
+      target: '{{ trigger.event.data.user_id }}'
+    service: telegram_bot.send_message
 - id: '1532810540535'
   alias: 'Hög Fukt '
   trigger:
@@ -59,9 +59,9 @@
   alias: Strömavbrott
   trigger:
   - entity_id: sensor.nut_ups_status_data
-    from: Online
+    from: OL
     platform: state
-    to: Offline
+    to: OB
   condition: []
   action:
   - data:
@@ -79,3 +79,18 @@
   - data:
       message: 'Strömmen är tillbaka '
     service: notify.telegram_jocke
+- id: '1534910062529'
+  alias: Telegram-Bot Miljö
+  trigger:
+  - event_data:
+      command: /klimat
+    event_type: telegram_command
+    platform: event
+  condition: []
+  action:
+  - data:
+      message: 'Fukt Och temperatur i källaren,  {{ states.sensor.kallaretemp_2_0.state
+        }} %, {{states.sensor.kallaretemp_2_1.state}} °, Fukt och temperatur vardagsrum,
+        {{states.sensor.vardagsrumtemp_8_0.state}} %, {{states.sensor.vardagsrumtemp_8_1.state
+        }} ° '
+    service: telegram_bot.send_message
