@@ -65,15 +65,18 @@
   condition: []
   action:
   - data:
-      message: Strömavbrott
+      message: Strömavbrott på villa moga !
     service: notify.telegram_jocke
+  - data:
+      message: Strömavbrott på villa moga !
+    service: notify.telegram_helena
 - id: '1534701155450'
   alias: Strömmen Tillbaka
   trigger:
   - entity_id: sensor.nut_ups_status_data
-    from: Offline
+    from: OB
     platform: state
-    to: Online
+    to: OL
   condition: []
   action:
   - data:
