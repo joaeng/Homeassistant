@@ -96,9 +96,10 @@ hassio:
 
 binary_sensor:
   - platform: ping
-    host: http://www.engberg.info
+    host: 8.8.8.8
     count: 2
-    scan_interval: 30
+    scan_interval: 900
+    name: online-sensor
   - platform: uptimerobot
     api_key: u612908-62df55ccbf0afe6aed7f155d
 

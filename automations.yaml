@@ -97,3 +97,27 @@
         {{states.sensor.vardagsrumtemp_8_0.state}} %, {{states.sensor.vardagsrumtemp_8_1.state
         }} ° '
     service: telegram_bot.send_message
+- id: '1537032941882'
+  alias: Offline.Boot
+  trigger:
+  - entity_id: binary_sensor.onlinesensor
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data:
+      message: internet goes down
+    service: notify.telegram_jocke
+- id: '1537035541825'
+  alias: Online
+  trigger:
+  - entity_id: binary_sensor.onlinesensor
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: 'Internet is back '
+    service: notify.telegram_jocke

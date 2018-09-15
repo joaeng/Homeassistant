@@ -89,7 +89,7 @@
 
 ############################ Teknik
 
-  tech:
+  ups:
     name: UPS
     #view: yes
     entities:
@@ -97,10 +97,20 @@
       - sensor.nut_ups_battery_runtime
       - sensor.nut_ups_load
       - sensor.nut_ups_status_data
+  div:
+    name: Diverse
+    #view: yes
+    entities:
+  #    - sensor.nut_ups_input_voltage
+  #    - sensor.nut_ups_battery_runtime
+  #    - sensor.nut_ups_load
+       - binary_sensor.onlinesensor
+
   Teknik:
     view: yes
     entities:
-      - group.tech
+      - group.ups
+      - group.div
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
