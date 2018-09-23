@@ -117,3 +117,18 @@ notify:
     platform: telegram
     chat_id: 616013004
 
+switch:
+
+  - platform: broadlink
+    host: 192.168.1.100
+    type: rm_mini
+    mac: '34-EA-34-43-93-04'
+    timeout: 15
+    switches:
+      aircon_living_room:
+        friendly_name: "Living Room AC"
+        command_on: 'JgCSAAABJ5MWNhYRFhIWNRYSFhEWEhYSFjUWEhYRFjYWERYSFhIWERYSFhEWEhYRFhIWNRcRFhIWERYSFhEWEhY1FxEWNRcRFhIWNRYSFgACkBcRFhIWERYSFhEWEhYRFxEWERcRFhIWERYSFjUWEhYRFxEWEhYRFhIWERYSFhEXERYRFxEWEhYRFhIWNRY2FjUXAA0FAAAAAAAA'
+        command_off: 'JgCSAAABKZIXNRYSFhEWEhYRFxEWEhYRFjYWERYSFjUXERYSFhEWEhYRFhIWERYSFhEXNRYSFhEWEhYRFhIWERc1FhIWNRYSFhEWNhYRFwACkBYSFhEWEhYRFhIWERcRFhIWERYSFhEWEhYRFjYWERcRFhIWERYSFhEWEhYRFxEWEhYRFhIWERYSFhEWNhY1FxEWAA0FAAAAAAAA'
+deconz:
+  host: 192.168.0.190
+  port: 8080
