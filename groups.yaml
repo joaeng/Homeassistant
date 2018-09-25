@@ -53,14 +53,18 @@
     entities:
       - sensor.vardagsrumtemp_8_1
       - sensor.vardagsrumtemp_8_0
+      - climate.luftvarmepump
+      
   Entreplan:
     view: yes
     entities:
       - group.firstfloor
+      - climate.luftvarmepump
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
       - sensor.yr_humidity
+
 ############################ Vind
   Attic:
     name: Klimat Vind
