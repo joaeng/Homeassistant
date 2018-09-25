@@ -117,11 +117,11 @@ notify:
     platform: telegram
     chat_id: 616013004
 
-#switch:
-#  - platform: broadlink
-#    host: 192.168.0.100
-#    type: rm_mini
-#    mac: '34-EA-34-43-93-04'
+switch:
+  - platform: broadlink
+    host: 192.168.0.100
+    type: rm_mini
+    mac: '34:EA:34:43:93:04'
 #    timeout: 15
 #    switches:
 #      aircon_living_room:
