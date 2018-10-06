@@ -37,11 +37,15 @@
       - sensor.kallaretemp_2_1
       - sensor.kallaretemp_2_0
      # - sensor.ups.status
- 
+  Grovkok:
+    name: Grovkök
+    entities:
+      - binary_sensor.rorelse_grovkok 
   Källare:
     view: yes
     entities:
       - group.basement
+      - group.grovkok
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
@@ -54,12 +58,16 @@
       - sensor.vardagsrumtemp_8_1
       - sensor.vardagsrumtemp_8_0
       - climate.luftvarmepump
-      
+  hall:
+    name: Hall
+    entities:
+      - switch.element_hall   
   Entreplan:
     view: yes
     entities:
       - group.firstfloor
       - climate.luftvarmepump
+      - group.hall
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
