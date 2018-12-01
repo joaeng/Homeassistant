@@ -121,3 +121,15 @@
   - data:
       message: 'Internet is back '
     service: notify.telegram_jocke
+- id: '1540800424119'
+  alias: Rörelse
+  trigger:
+  - entity_id: binary_sensor.rorelse_grovkok_2
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: Rörelse Detekterad
+    service: notify.telegram_jocke

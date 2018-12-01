@@ -21,7 +21,7 @@ frontend:
 
 # Enables configuration UI
 config:
-
+ios:
 http:
   # Secrets are defined in the file secrets.yaml
    api_password: !secret http_password
@@ -157,3 +157,13 @@ climate: !include climate.yaml
 #        - mid
 #        - high
 #        - auto
+
+
+mqtt:
+  broker: http://engberg.info
+ 
+  username: joakim
+  password: julian
+
+mqtt_eventstream:
+  publish_topic: Villa-Moga
