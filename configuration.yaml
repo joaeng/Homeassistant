@@ -160,10 +160,10 @@ climate: !include climate.yaml
 
 
 mqtt:
-  broker: http://engberg.info
+#  broker: http://engberg.info
 
-  username: joakim
-  password: julian
+#  username: joakim
+#  password: julian
 
 mqtt_eventstream:
   publish_topic: Villa-Moga
