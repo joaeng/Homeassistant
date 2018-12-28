@@ -58,16 +58,16 @@
       - sensor.vardagsrumtemp_8_1
       - sensor.vardagsrumtemp_8_0
       - climate.luftvarmepump
-  hall:
-    name: Hall
+  kok:
+    name: Kök
     entities:
-      - switch.element_hall   
+      - switch.element_vardagsrum   
   Entreplan:
     view: yes
     entities:
       - group.firstfloor
       - climate.luftvarmepump
-      - group.hall
+      - group.kok
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
