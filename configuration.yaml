@@ -24,7 +24,7 @@ config:
 ios:
 http:
   # Secrets are defined in the file secrets.yaml
-   api_password: !secret http_password
+  # api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
 
@@ -89,8 +89,9 @@ panel_iframe:
     url: https://cdn.rawgit.com/james-fry/home-assistant-mdi/efd95d7a/home-assistant-mdi.html
 mysensors:
   gateways:
-    - device: '/dev/ttyUSB0'
-      persistence_file: '/config/mysensors.json'
+    - device: '/dev/ttyUSB1'
+      persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
+      baud_rate: 115200
 
 
 
@@ -101,7 +102,7 @@ binary_sensor:
     scan_interval: 600
     name: online-sensor
   - platform: uptimerobot
-    api_key: u612908-62df55ccbf0afe6aed7f155d
+    api_key: !secret uptime_key
 
 telegram_bot:
   - platform: polling
@@ -159,11 +160,11 @@ climate: !include climate.yaml
 #        - auto
 
 
-mqtt:
+#mqtt:
 #  broker: http://engberg.info
 
 #  username: joakim
 #  password: julian
 
-mqtt_eventstream:
-  publish_topic: Villa-Moga
+#mqtt_eventstream:
+#  publish_topic: Villa-Moga

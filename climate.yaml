@@ -1,23 +1,22 @@
-  - platform: broadlink
-    name: Luftvärmepump
-    host: 192.168.0.100
-    mac: '34:EA:34:43:93:04'
-    ircodes_ini: '/custom_components/broadlink_climate_codes/mitsubishi_electric.ini'
-    min_temp: 16
-    max_temp: 30
-    target_temp: 20
-    target_temp_step: 1
-    temp_sensor: sensor.vardagsrumtemp_8_1
-    default_operation: 'off'
-    default_fan_mode: mid
-    customize:
-      operations:
-        - 'off'
-        - cool
-        - heat
-      fan_modes:
-        - low
-        - mid
-        - high
-        - auto
-
+  #- platform: broadlink
+  #  name: Luftvärmepump
+  #  host: 192.168.0.100
+  #  mac: '34:EA:34:43:93:04'
+  #  ircodes_ini: '/custom_components/broadlink_climate_codes/mitsubishi_electric.ini'
+  #  min_temp: 16
+  #  max_temp: 30
+  #  target_temp: 20
+  #  target_temp_step: 1
+  #  temp_sensor: sensor.vardagsrumtemp_8_1
+  #  default_operation: 'off'
+  #  default_fan_mode: mid
+  #  customize:
+  #    operations:
+  #      - 'off'
+  #      - cool
+  #      - heat
+  #    fan_modes:
+  #      - low
+  #      - mid
+  #      - high
+  #      - auto
