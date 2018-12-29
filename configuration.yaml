@@ -108,15 +108,15 @@ telegram_bot:
   - platform: polling
     api_key: !secret telegram_api
     allowed_chat_ids:
-      - 567878632 #jocke
-      - 616013004 #helena
+      - !secret telegram_jocke
+      - !secret telegram_helena
 notify:
   - name: Telegram_Jocke
     platform: telegram
-    chat_id: 567878632
+    chat_id: !secret telegram_jocke
   - name: Telegram_Helena
     platform: telegram
-    chat_id: 616013004
+    chat_id: !secret telegram_helena
 
 switch:
   - platform: broadlink
@@ -129,9 +129,9 @@ switch:
 #        friendly_name: "Living Room AC"
 #        command_on: 'JgCSAAABJ5MWNhYRFhIWNRYSFhEWEhYSFjUWEhYRFjYWERYSFhIWERYSFhEWEhYRFhIWNRcRFhIWERYSFhEWEhY1FxEWNRcRFhIWNRYSFgACkBcRFhIWERYSFhEWEhYRFxEWERcRFhIWERYSFjUWEhYRFxEWEhYRFhIWERYSFhEXERYRFxEWEhYRFhIWNRY2FjUXAA0FAAAAAAAA'
 #        command_off: 'JgCSAAABKZIXNRYSFhEWEhYRFxEWEhYRFjYWERYSFjUXERYSFhEWEhYRFhIWERYSFhEXNRYSFhEWEhYRFhIWERc1FhIWNRYSFhEWNhYRFwACkBYSFhEWEhYRFhIWERcRFhIWERYSFhEWEhYRFjYWERcRFhIWERYSFhEWEhYRFxEWEhYRFhIWERYSFhEWNhY1FxEWAA0FAAAAAAAA'
-deconz:
-  host: 192.168.0.190
-  port: 8080
+#deconz:
+#  host: 192.168.0.190
+#  port: 8080
 
 
 
@@ -160,11 +160,3 @@ climate: !include climate.yaml
 #        - auto
 
 
-#mqtt:
-#  broker: http://engberg.info
-
-#  username: joakim
-#  password: julian
-
-#mqtt_eventstream:
-#  publish_topic: Villa-Moga
