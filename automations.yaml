@@ -144,3 +144,13 @@
       entity_id: light.lampan_pa_hornan
       color: 250
     service: light.turn_on
+- id: '1547926991599'
+  alias: Ytterbelysning av
+  trigger:
+  - at: '23:00'
+    platform: time
+  condition: []
+  action:
+  - data:
+      entity_id: group.belysningute
+    service: light.turn_off
