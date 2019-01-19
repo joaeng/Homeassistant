@@ -133,3 +133,13 @@
   - data:
       message: Rörelse Detekterad
     service: notify.telegram_jocke
+- id: '1547900104231'
+  alias: Solnedgång
+  trigger:
+  - event: sunset
+    platform: sun
+  condition: []
+  action:
+  - data:
+      entity_id: light.lampan_pa_hornan
+    service: light.turn_on
