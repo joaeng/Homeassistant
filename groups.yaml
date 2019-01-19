@@ -21,14 +21,22 @@
     entities:
       - sensor.kallaretemp_2_1
       - sensor.kallaretemp_2_0
+  belysning-ute:
+    name: Ytterbelysning
+    #view: yes
+    entities:
+      - light.lampan_pa_hornan
+
   Utomhus:
     view: yes
     entities:
       - group.outside
+      - group.belysningute
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol
       - sensor.yr_humidity
+
 ############################ Källare
   basement:
     name: Klimat Källare

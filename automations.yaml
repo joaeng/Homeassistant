@@ -142,4 +142,5 @@
   action:
   - data:
       entity_id: light.lampan_pa_hornan
+      color: 250
     service: light.turn_on
