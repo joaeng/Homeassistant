@@ -13,6 +13,7 @@
       - sensor.yr_symbol
       - sensor.yr_humidity
       - sensor.nut_ups_load
+       
              
 ############################# Utomhus
   outside:
@@ -135,4 +136,5 @@
       - sensor.yr_temperature
       - sensor.yr_symbol
       - sensor.yr_humidity
+      - updater.updater
 
