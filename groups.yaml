@@ -70,13 +70,28 @@
   kok:
     name: Kök
     entities:
-      - switch.element_vardagsrum   
+      - switch.element_vardagsrum
+      - sensor.temp_kok
+      - sensor.fukt_kok
+  livingroom:
+    name: vardagsrum
+    entities: 
+      - sensor.temperature_5
+      - sensor.humidity_7
+  bedroom:
+    name: Sovrum
+    entities:
+      - sensor.temperature_2
+      - sensor.humidity_3
+   
   Entreplan:
     view: yes
     entities:
       - group.firstfloor
       - climate.luftvarmepump
       - group.kok
+      - group.bedroom
+      - group.livingroom
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol

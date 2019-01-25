@@ -8,3 +8,7 @@ sensor.vardagsrumtemp_8_0:
   friendly_name: Vardagsrum fukt
 sensor.vardagsrumtemp_8_1:
   friendly_name: Vardagsrum temp
+sensor.temp_kok:
+  friendly_name: Kök
+sensor.fukt_kok:
+  friendly_name: kök
