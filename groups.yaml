@@ -70,14 +70,16 @@
   kok:
     name: Kök
     entities:
-      - switch.element_vardagsrum
+      - switch.element_kok
       - sensor.temp_kok
       - sensor.fukt_kok
   livingroom:
     name: vardagsrum
-    entities: 
+    entities:
+      - switch.element_vardagsrum
       - sensor.temperature_5
       - sensor.humidity_7
+
   bedroom:
     name: Sovrum
     entities:
