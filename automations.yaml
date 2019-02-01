@@ -101,6 +101,8 @@
   alias: Offline.Boot
   trigger:
   - entity_id: binary_sensor.onlinesensor
+    for:
+      minutes: 20
     from: 'on'
     platform: state
     to: 'off'
@@ -109,6 +111,17 @@
   - data:
       message: internet goes down
     service: notify.telegram_jocke
+  - data:
+      entity_id: switch.router
+    service: switch.turn_off
+  - delay: 00:05:00
+  - data:
+      entity_id: switch.router
+    service: switch.turn_on
+
+
+
+
 - id: '1537035541825'
   alias: Online
   trigger:
