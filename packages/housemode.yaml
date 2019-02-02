@@ -1,0 +1,99 @@
+################################################################################
+# House.Mode.Package                                                           #
+# Made By: Joakim Engberg                                                      #
+# Source:                                                                      #
+# https://github.com/joaeng/backuphome/blob/master/packages/housemode.yaml     #
+################################################################################
+
+################################################################################
+#                                                                configuration #
+################################################################################
+
+input_boolean:
+  status:
+    name: Närvaro
+    initial: off
+
+################################################################################
+#                                                                        Group #
+################################################################################
+
+group:
+  status:
+    name: Närvaro
+    view: yes
+    entities:
+    - sensor.housemode
+    - input_boolean.status
+    - automation.solnedgang
+    - automation.bevattning
+    - script.home
+    - script.away
+
+################################################################################
+#                                                                       switch #
+################################################################################
+
+#switch:
+
+################################################################################
+#                                                                      sensors #
+################################################################################
+
+sensor:
+  - platform: template
+    sensors:
+      housemode:
+          value_template: >-
+            {% if is_state("input_boolean.status","off") %}
+              away
+            {% else %}
+              home
+            {% endif %}
+
+################################################################################
+#                                                                  Automations #
+################################################################################
+
+automation:
+  - alias: away
+    trigger:
+      - entity_id: sensor.housemode
+        from: home
+        platform: state
+        to: away
+    action:
+      service: script.turn_on
+      entity_id: script.away
+
+  - alias: home
+    trigger:
+      - entity_id: sensor.housemode
+        from: away
+        platform: state
+        to: home
+    action:
+      service: script.turn_on
+      entity_id: script.home
+
+################################################################################
+#                                                                       script #
+################################################################################
+
+script:
+  away:
+    alias: away
+    sequence:
+      - alias : Start Away-mode
+        service: homeassistant.turn_off
+        entity_id:
+          - automation.solnedgang
+         # - automation.bevattning
+  home:
+    alias: home
+    sequence:
+      - alias: Start Home-mode
+        service: homeassistant.turn_on
+        entity_id:
+          - automation.solnedgang
+         # - automation.bevattning
