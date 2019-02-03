@@ -118,7 +118,10 @@
   - data:
       entity_id: switch.router
     service: switch.turn_on
-
+  - delay: 00:05:00
+  - data: 
+      message: Startat om
+    service: notify.telegram_jocke
 
 
 
@@ -146,6 +149,7 @@
   - data:
       message: Rörelse Detekterad
     service: notify.telegram_jocke
+
 - id: '1547900104231'
   alias: Solnedgång
   trigger:
@@ -156,6 +160,7 @@
   - data:
       entity_id: light.lampan_pa_hornan
     service: light.turn_on
+
 - id: '1547926991599'
   alias: Ytterbelysning av
   trigger:
