@@ -160,3 +160,8 @@ climate: !include climate.yaml
 #        - auto
 
 
+logger:
+  default: info
+  logs:
+    pydeconz: debug
+    homeassistant.components.deconz: debug

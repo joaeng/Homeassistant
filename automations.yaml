@@ -119,12 +119,9 @@
       entity_id: switch.router
     service: switch.turn_on
   - delay: 00:05:00
-  - data: 
+  - data:
       message: Startat om
     service: notify.telegram_jocke
-
-
-
 - id: '1537035541825'
   alias: Online
   trigger:
@@ -149,7 +146,6 @@
   - data:
       message: Rörelse Detekterad
     service: notify.telegram_jocke
-
 - id: '1547900104231'
   alias: Solnedgång
   trigger:
@@ -160,7 +156,6 @@
   - data:
       entity_id: light.lampan_pa_hornan
     service: light.turn_on
-
 - id: '1547926991599'
   alias: Ytterbelysning av
   trigger:
@@ -171,3 +166,36 @@
   - data:
       entity_id: group.belysningute
     service: light.turn_off
+- id: '1550302826462'
+  alias: home-switch
+  trigger:
+  - event_data:
+      event: 1002
+      id: sw1
+    event_type: deconz_event
+    platform: event
+  condition: []
+  action:
+  - data:
+      message: Testar knapp, 1
+    service: notify.telegram_jocke
+  - alias: ''
+    data:
+      entity_id: input_boolean.status
+    service: input_boolean.turn_on
+- id: '1550304793706'
+  alias: away-switch
+  trigger:
+  - event_data:
+      event: 2002
+      id: sw1
+    event_type: deconz_event
+    platform: event
+  condition: []
+  action:
+  - data:
+      message: Testar knapp, 2
+    service: notify.telegram_jocke
+  - data:
+      entity_id: input_boolean.status
+    service: input_boolean.turn_off
