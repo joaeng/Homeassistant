@@ -29,6 +29,7 @@ group:
     - automation.bevattning
     - script.home
     - script.away
+    - switch.toalett
 
 ################################################################################
 #                                                                       switch #
@@ -88,7 +89,7 @@ script:
         service: homeassistant.turn_off
         entity_id:
           - automation.solnedgang
-         # - automation.bevattning
+          - switch.toalett
   home:
     alias: home
     sequence:
@@ -96,4 +97,5 @@ script:
         service: homeassistant.turn_on
         entity_id:
           - automation.solnedgang
-         # - automation.bevattning
+          - switch.toalett
+

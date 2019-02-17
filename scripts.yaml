@@ -4,3 +4,9 @@
   - data:
       message: Hej helena, det är ditt hus som talar
     service: notify.telegram_helena
+'1550339697118':
+  alias: 'testar '
+  sequence:
+  - data:
+      entity_id: switch.element_kok
+    service: homeassistant.turn_off

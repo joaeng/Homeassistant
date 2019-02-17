@@ -27,7 +27,7 @@
     #view: yes
     entities:
       - light.lampan_pa_hornan
-
+      - light.gytterbelysning
   Utomhus:
     view: yes
     entities:

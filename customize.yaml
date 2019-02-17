@@ -12,3 +12,7 @@ sensor.temp_kok:
   friendly_name: Kök
 sensor.fukt_kok:
   friendly_name: kök
+light.gytterbelysning:
+  friendly_name: Gästhus Gavel
+light.lampan_pa_hornan:
+  friendly_name: Storstugan Gavel
