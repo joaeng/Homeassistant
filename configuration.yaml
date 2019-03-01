@@ -89,7 +89,7 @@ panel_iframe:
     url: https://cdn.rawgit.com/james-fry/home-assistant-mdi/efd95d7a/home-assistant-mdi.html
 mysensors:
   gateways:
-    - device: '/dev/ttyUSB1'
+    - device: '/dev/ttyUSB0'
       persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
       baud_rate: 115200
 
