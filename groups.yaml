@@ -45,6 +45,7 @@
     entities:
       - sensor.kallaretemp_2_1
       - sensor.kallaretemp_2_0
+      - sensor.temperature_14
      # - sensor.ups.status
   Grovkok:
     name: Grovkök
@@ -154,4 +155,20 @@
       - sensor.yr_symbol
       - sensor.yr_humidity
       - updater.updater
+
+############################ Vind
+  guesthouse:
+    name: Klimat Gästhus
+    #view: yes
+    entities:
+      - sensor.humidity_17
+      - sensor.temperature_16
+  Gästhus:
+    view: yes
+    entities:
+      - group.guesthouse
+      - sun.sun
+      - sensor.yr_temperature
+      - sensor.yr_symbol
+      - sensor.yr_humidity
 
