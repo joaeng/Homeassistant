@@ -167,3 +167,5 @@ logger:
   logs:
     pydeconz: debug
     homeassistant.components.deconz: debug
+mqtt:
+  password: testar
