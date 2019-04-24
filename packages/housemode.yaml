@@ -32,7 +32,7 @@ group:
     - switch.toalett
     #- switch.forstarkare
     #- switch.tv-b
-    #- switch.element
+    - switch.element_vardagsrum
 
 ################################################################################
 #                                                                       switch #
@@ -94,6 +94,7 @@ script:
           - automation.solnedgang
           - switch.toalett
           #- switch.forstarkare
+          - switch.element_vardagsrum
   home:
     alias: home
     sequence:
@@ -103,3 +104,4 @@ script:
           - automation.solnedgang
           - switch.toalett
           #- switch.forstarkare
+          - switch.element_vardagsrum
