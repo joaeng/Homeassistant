@@ -30,7 +30,7 @@ group:
     - script.home
     - script.away
     - switch.toalett
-    - switch.forstarkare
+    #- switch.forstarkare
 
 ################################################################################
 #                                                                       switch #
