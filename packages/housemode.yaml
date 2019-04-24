@@ -30,6 +30,7 @@ group:
     - script.home
     - script.away
     - switch.toalett
+    - switch.forstarkare
 
 ################################################################################
 #                                                                       switch #
@@ -90,6 +91,7 @@ script:
         entity_id:
           - automation.solnedgang
           - switch.toalett
+          - switch.forstarkare
   home:
     alias: home
     sequence:
@@ -98,4 +100,5 @@ script:
         entity_id:
           - automation.solnedgang
           - switch.toalett
+          - switch.forstarkare
 
