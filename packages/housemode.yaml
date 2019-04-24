@@ -31,6 +31,8 @@ group:
     - script.away
     - switch.toalett
     #- switch.forstarkare
+    #- switch.tv-b
+    #- switch.element
 
 ################################################################################
 #                                                                       switch #
