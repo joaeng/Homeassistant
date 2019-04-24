@@ -91,7 +91,7 @@ script:
         entity_id:
           - automation.solnedgang
           - switch.toalett
-          - switch.forstarkare
+          #- switch.forstarkare
   home:
     alias: home
     sequence:
@@ -100,5 +100,4 @@ script:
         entity_id:
           - automation.solnedgang
           - switch.toalett
-          - switch.forstarkare
-
+          #- switch.forstarkare
