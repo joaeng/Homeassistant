@@ -33,6 +33,7 @@ group:
     #- switch.forstarkare
     #- switch.tv-b
     - switch.element_vardagsrum
+    - switch.element_kok
 
 ################################################################################
 #                                                                       switch #
@@ -93,7 +94,7 @@ script:
         entity_id:
           - automation.solnedgang
           - switch.toalett
-          #- switch.forstarkare
+          - switch.forstarkare
           - switch.element_vardagsrum
   home:
     alias: home
@@ -103,5 +104,5 @@ script:
         entity_id:
           - automation.solnedgang
           - switch.toalett
-          #- switch.forstarkare
+          - switch.forstarkare
           - switch.element_vardagsrum
