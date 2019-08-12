@@ -20,14 +20,14 @@
     name: Klimat Utomhus
     #view: yes
     entities:
-      - sensor.kallaretemp_2_1
-      - sensor.kallaretemp_2_0
+      - sensor.soder
+      - sensor.Norr
   belysning-ute:
     name: Ytterbelysning
     #view: yes
     entities:
       - light.lampan_pa_hornan
-      - light.gytterbelysning
+      - light.gasthus_gavel1
   Utomhus:
     view: yes
     entities:
@@ -43,8 +43,8 @@
     name: Klimat Källare
     #view: yes
     entities:
-      - sensor.kallaretemp_2_1
-      - sensor.kallaretemp_2_0
+      - sensor.humidity_13
+      - sensor.temperature_12
       - sensor.temperature_14
      # - sensor.ups.status
   Grovkok:

@@ -71,6 +71,17 @@ sensor:
       - input.voltage
       - battery.runtime
       - ups.mfr
+  - platform: mqtt
+    name: 'Söder'
+    state_topic: "/Temperatur/soder/Temperature"
+    retain: true
+    icon: mdi:temperature-celsius
+  - platform: mqtt
+    name: 'Norr'
+    state_topic: "/Temperatur/Norr/Temperature"
+    retain: true
+    icon: mdi:temperature-celsius
+
 # Text to speech
 tts:
   - platform: google
