@@ -154,7 +154,7 @@
   condition: []
   action:
   - data:
-      entity_id: 
+      entity_id:
       - light.lampan_pa_hornan
       - light.gasthus_gavel1
     service: light.turn_on
@@ -201,3 +201,4 @@
   - data:
       entity_id: input_boolean.status
     service: input_boolean.turn_off
+

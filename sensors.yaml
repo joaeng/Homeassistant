@@ -1,0 +1,6 @@
+  - platform: min_max
+    entity_ids:
+      - sensor.soder
+      - sensor.norr
+    type: min
+    name: Utomhustemperatur

@@ -81,6 +81,13 @@ sensor:
     state_topic: "/Temperatur/Norr/Temperature"
     retain: true
     icon: mdi:temperature-celsius
+  - platform: min_max
+    entity_ids:
+      - sensor.soder
+      - sensor.norr
+    type: min
+    name: Utomhustemperatur
+
 
 # Text to speech
 tts:
@@ -180,3 +187,4 @@ logger:
     homeassistant.components.deconz: debug
 mqtt:
   password: testar
+
