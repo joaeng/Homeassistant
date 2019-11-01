@@ -46,7 +46,7 @@
       - sensor.humidity_13
       - sensor.temperature_12
       - sensor.temperature_14
-     # - sensor.ups.status
+      - sensor.humidity_15
   Grovkok:
     name: Grovkök
     entities:
@@ -65,28 +65,25 @@
     name: Klimat Entreplan
     #view: yes
     entities:
-      - sensor.vardagsrumtemp_8_1
-      - sensor.vardagsrumtemp_8_0
-      - climate.luftvarmepump
+      - sensor.temp_sov
+      - sensor.temperature_5
+      - sensor.temperature_2
   kok:
     name: Kök
     entities:
       - switch.element_kok
-      - sensor.temp_kok
-      - sensor.fukt_kok
+
   livingroom:
     name: vardagsrum
     entities:
       - switch.element_vardagsrum
-      - sensor.temperature_5
-      - sensor.humidity_7
+
 
   bedroom:
     name: Sovrum
     entities:
-      - sensor.temperature_2
-      - sensor.humidity_3
-   
+
+ 
   Entreplan:
     view: yes
     entities:

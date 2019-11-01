@@ -157,6 +157,9 @@
       entity_id:
       - light.lampan_pa_hornan
       - light.gasthus_gavel1
+      - switch.vita_banken
+      - switch.forstarkare
+      - light.gytterbelysning 
     service: light.turn_on
 - id: '1547926991599'
   alias: Ytterbelysning av

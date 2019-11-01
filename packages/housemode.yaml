@@ -96,6 +96,7 @@ script:
           - switch.toalett
           - switch.forstarkare
           - switch.element_vardagsrum
+          - switch.vita_banken
   home:
     alias: home
     sequence:
