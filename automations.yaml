@@ -157,10 +157,14 @@
       entity_id:
       - light.lampan_pa_hornan
       - light.gasthus_gavel1
+      - light.kallardorr
+      - light.gytterbelysning
+    service: light.turn_on
+  - data:
+      entity_id:
       - switch.vita_banken
       - switch.forstarkare
-      - light.gytterbelysning 
-    service: light.turn_on
+    service: switch.turn_on
 - id: '1547926991599'
   alias: Ytterbelysning av
   trigger:
@@ -204,4 +208,29 @@
   - data:
       entity_id: input_boolean.status
     service: input_boolean.turn_off
-
+- id: '1572729342798'
+  alias: element away
+  trigger:
+  - entity_id: sensor.housemode
+    from: home
+    platform: state
+    to: away
+  condition: []
+  action:
+  - data:
+      entity_id: climate.vardagsrum
+      temperature: '10'
+    service: climate.set_temperature
+- id: '1572729418041'
+  alias: element home
+  trigger:
+  - entity_id: sensor.housemode
+    from: away
+    platform: state
+    to: home
+  condition: []
+  action:
+  - data:
+      entity_id: climate.vardagsrum
+      temperature: '22'
+    service: climate.set_temperature

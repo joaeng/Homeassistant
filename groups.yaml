@@ -77,7 +77,7 @@
     name: vardagsrum
     entities:
       - switch.element_vardagsrum
-
+      - climate.vardagsrum
 
   bedroom:
     name: Sovrum

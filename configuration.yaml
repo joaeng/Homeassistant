@@ -187,3 +187,7 @@ logger:
 mqtt:
   password: testar
 
+climate:
+  - platform: mill
+    username: !secret mill_name
+    password: !secret mill_psw
