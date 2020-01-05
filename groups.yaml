@@ -5,7 +5,7 @@
     entities:
       - group.kitchen
       - group.awesome_people
-      - group.climate
+    #  - group.climate
     # - group.Basement
       - group.klimat
       - sun.sun
@@ -28,6 +28,7 @@
     entities:
       - light.lampan_pa_hornan
       - light.gasthus_gavel1
+      - light.kallardorr
   Utomhus:
     view: yes
     entities:
@@ -72,12 +73,13 @@
     name: Kök
     entities:
       - switch.element_kok
-
+      - light.gytterbelysning
   livingroom:
     name: vardagsrum
     entities:
       - switch.element_vardagsrum
       - climate.vardagsrum
+      - switch.vita_banken
 
   bedroom:
     name: Sovrum
@@ -160,10 +162,20 @@
     entities:
       - sensor.humidity_17
       - sensor.temperature_16
+
+
+  guesthouse_lights:
+    name: Belysning Gästhus
+    #view: yes
+    entities:
+      - switch.gasthus_fonster1
+
+
   Gästhus:
     view: yes
     entities:
       - group.guesthouse
+      - group.guesthouse_lights
       - sun.sun
       - sensor.yr_temperature
       - sensor.yr_symbol

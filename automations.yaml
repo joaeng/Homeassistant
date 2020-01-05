@@ -232,5 +232,15 @@
   action:
   - data:
       entity_id: climate.vardagsrum
-      temperature: '22'
+      temperature: '15'
+    service: climate.set_temperature
+  - delay: 00:45:00
+  - data:
+      entity_id: climate.vardagsrum
+      temperature: '18'
+    service: climate.set_temperature
+  - delay: 01:30:00
+  - data:
+      entity_id: climate.vardagsrum
+      temperature: '21'
     service: climate.set_temperature
