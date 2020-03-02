@@ -1,7 +1,7 @@
 homeassistant:
   #customize: !include customize.yaml
   # Name of the location where Home Assistant is running
-  name: Villa-Moga
+  name: Villa-Moga 1.5
   # Location required to calculate the time the sun rises and sets
   latitude: 59.910568
   longitude: 18.051643
