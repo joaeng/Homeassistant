@@ -88,8 +88,13 @@ sensor:
       - sensor.norr
     type: min
     name: Utomhustemperatur
-
-
+  - platform: miflora
+    mac: 'C4:7C:8D:6A:07:40'
+    monitored_conditions:
+      - moisture
+      - battery
+      - temperature
+      - light
 # Text to speech
 tts:
   - platform: google

@@ -74,6 +74,7 @@
     entities:
       - switch.element_kok
       - light.gytterbelysning
+      - climate.kok
   livingroom:
     name: vardagsrum
     entities:
