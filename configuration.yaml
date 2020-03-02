@@ -1,5 +1,5 @@
 homeassistant:
-  customize: !include customize.yaml
+  #customize: !include customize.yaml
   # Name of the location where Home Assistant is running
   name: Villa-Moga
   # Location required to calculate the time the sun rises and sets
@@ -111,11 +111,11 @@ panel_iframe:
     title: MDI Icon Index
     icon: mdi:vector-square
     url: https://cdn.rawgit.com/james-fry/home-assistant-mdi/efd95d7a/home-assistant-mdi.html
-mysensors:
-  gateways:
-    - device: '/dev/ttyUSB0'
-      persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
-      baud_rate: 115200
+#mysensors:
+#  gateways:
+#    - device: '/dev/ttyUSB0'
+#      persistence_file: '/home/homeassistant/.homeassistant/mysensors.json'
+#      baud_rate: 115200
 
 
 
@@ -128,30 +128,30 @@ binary_sensor:
   - platform: uptimerobot
     api_key: !secret uptime_key
 
-telegram_bot:
-  - platform: polling
-    api_key: !secret telegram_api
-    allowed_chat_ids:
-      - !secret telegram_jocke
-      - !secret telegram_helena
-notify:
-  - name: Telegram_Jocke
-    platform: telegram
-    chat_id: !secret telegram_jocke
-  - name: Telegram_Helena
-    platform: telegram
-    chat_id: !secret telegram_helena
-switch:
-  - platform: broadlink
-    host: 192.168.0.85
-    type: rm_mini
-    mac: '34:ea:34:43:93:04'
-    timeout: 15
-    switches:
-      aircon_living_room:
-        friendly_name: "Living Room AC"
-        command_on: 'JgBMAm82DykOKQ4ODg0ODg4pDg4ODQ8pDikODQ8pDg0PDQ4pDikPDQ4pDykODQ4OD'
-        command_off: 'JgBMAm05DSoOKQ40DBAMDwwrDQ8MEA4pDCsMEAwrDg4MDw4pDSsMD'
+#telegram_bot:
+#  - platform: polling
+#    api_key: !secret telegram_api
+#    allowed_chat_ids:
+#      - !secret telegram_jocke
+#      - !secret telegram_helena
+#notify:
+#  - name: Telegram_Jocke
+#    platform: telegram
+#    chat_id: !secret telegram_jocke
+#  - name: Telegram_Helena
+#    platform: telegram
+#    chat_id: !secret telegram_helena
+#switch:
+#  - platform: broadlink
+#    host: 192.168.0.85
+#    type: rm_mini
+#    mac: '34:ea:34:43:93:04'
+#    timeout: 15
+#    switches:
+#      aircon_living_room:
+#        friendly_name: "Living Room AC"
+#        command_on: 'JgBMAm82DykOKQ4ODg0ODg4pDg4ODQ8pDikODQ8pDg0PDQ4pDikPDQ4pDykODQ4OD'
+#        command_off: 'JgBMAm05DSoOKQ40DBAMDwwrDQ8MEA4pDCsMEAwrDg4MDw4pDSsMD'
 
 #deconz:
 #  host: 192.168.0.190
@@ -197,3 +197,4 @@ climate:
     username: !secret mill_name
     password: !secret mill_psw
 
+#breaking_changes:
