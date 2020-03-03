@@ -141,7 +141,7 @@ binary_sensor:
 #  - name: Telegram_Helena
 #    platform: telegram
 #    chat_id: !secret telegram_helena
-#switch:
+switch:
 #  - platform: broadlink
 #    host: 192.168.0.85
 #    type: rm_mini
