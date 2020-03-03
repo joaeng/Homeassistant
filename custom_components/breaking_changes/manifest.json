@@ -10,5 +10,5 @@
   "codeowners": [
     "@ludeeus"
   ],
-  "homeassistant": "0.96.0"
+  "homeassistant": "0.84.2"
 }
