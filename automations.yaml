@@ -242,5 +242,5 @@
   - delay: 01:30:00
   - data:
       entity_id: climate.vardagsrum
-      temperature: '21'
+      temperature: '20'
     service: climate.set_temperature
