@@ -100,8 +100,7 @@ script:
     - delay: 03:30:00
     - data:
       service: homeassistant.turn_off
-      entity_id:
-        - switch.vattenpump1
+        entity_id: switch.vattenpump1
 
   home:
     alias: home
