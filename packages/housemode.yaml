@@ -97,10 +97,11 @@ script:
           - switch.forstarkare
           - switch.element_vardagsrum
           - switch.vita_banken
-      - delay: 03:30:00
-      - data:
-        service: homeassistant.turn_off
-          entity_id: switch.vattenpump1
+    - delay: 03:30:00
+    - data:
+      service: homeassistant.turn_off
+      entity_id:
+        - switch.vattenpump1
 
   home:
     alias: home
