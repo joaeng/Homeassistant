@@ -10,3 +10,15 @@
   - data:
       entity_id: switch.element_kok
     service: homeassistant.turn_off
+'1585490538183':
+  alias: För dröjning på pump
+  sequence:
+  - data:
+      entity_id:
+      - switch.toalett
+      - switch.vitabanken
+    service: automation.turn_off
+  - delay: 03:00:00
+  - data:
+      entity_id: switch.vattenpump1
+    service: homeassistant.turn_off
