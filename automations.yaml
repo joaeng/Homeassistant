@@ -247,8 +247,12 @@
     service: climate.set_temperature
   - delay: 01:30:00
   - data:
+<<<<<<< HEAD
       entity_id:
       - climate.vardagsrum
       - climate.kok
+=======
+      entity_id: climate.vardagsrum
+>>>>>>> 747236da376ae89569011677ec099c035e7185b0
       temperature: '20'
     service: climate.set_temperature
