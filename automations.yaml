@@ -218,8 +218,10 @@
   condition: []
   action:
   - data:
-      entity_id: climate.vardagsrum
-      temperature: '10'
+      entity_id:
+      - climate.vardagsrum
+      - climate.kok
+      temperature: '8'
     service: climate.set_temperature
 - id: '1572729418041'
   alias: element home
@@ -231,16 +233,22 @@
   condition: []
   action:
   - data:
-      entity_id: climate.vardagsrum
+      entity_id:
+      - climate.vardagsrum
+      - climate.kok
       temperature: '15'
     service: climate.set_temperature
   - delay: 00:45:00
   - data:
-      entity_id: climate.vardagsrum
+      entity_id:
+      - climate.vardagsrum
+      - climate.kok
       temperature: '18'
     service: climate.set_temperature
   - delay: 01:30:00
   - data:
-      entity_id: climate.vardagsrum
-      temperature: '21'
+      entity_id:
+      - climate.vardagsrum
+      - climate.kok
+      temperature: '20'
     service: climate.set_temperature
