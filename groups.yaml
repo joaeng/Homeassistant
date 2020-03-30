@@ -81,6 +81,7 @@
       - switch.element_vardagsrum
       - climate.vardagsrum
       - switch.vita_banken
+      - switch.forstarkare
 
   bedroom:
     name: Sovrum

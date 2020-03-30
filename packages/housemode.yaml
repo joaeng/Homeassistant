@@ -89,7 +89,7 @@ script:
   away:
     alias: away
     sequence:
-   
+
       - alias : Start Away-mode
         service: homeassistant.turn_off
         entity_id:
@@ -98,6 +98,13 @@ script:
           - switch.forstarkare
           - switch.element_vardagsrum
           - switch.vita_banken
+      - delay: 
+           hours:"03"
+           minutes:"30"
+      - alias: Vattenpump_off_delay
+        service: homeassistan.turn_off
+        entity_id: switch.vattenpump1
+
 
 
   home:
